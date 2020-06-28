@@ -1,12 +1,12 @@
-import { SERVER_PORT } from "./global/environment";
-import Server from "./classes/server";
-import router from "./routes/router";
-import cors from "cors";
+import { SERVER_PORT } from './global/environment';
+import Server from './classes/server';
+import router from './routes/router';
+import cors from 'cors';
 
 import bodyParser from 'body-parser';
 
 
-const server = new Server();
+const server = Server.instance;
 
 //BodyParser
 server.app.use( bodyParser.urlencoded({ extended: true }) );
